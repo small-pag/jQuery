@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src='js/jquery-3.1.1.js'></script>-->
+    <script src='04-njQuery-1.2.3.js'></script>
+        <script>
+            $(function () {
+                /*val: 获取元素的值, 设置元素的值*/
+
+                // 如果不传递参数, 返回第一个元素的value值
+//                console.log($('input')._val());
+                // 传入一个参数, 设置所有value为指定的参数值
+                $('input')._val('520it');
+                // 返回当前被操作的jQ实例
+//                console.log($('input').val('520it'));
+
+
+                /*
+                var input = document.querySelector('input');
+//                console.log(input.getAttribute('value'));
+                console.log(input.value);
+
+                $('button').click(function () {
+                    // 注意: 如果通过getAttribute获取value值, 只能获取默认值, 而不能获取修改之后的值
+//                    console.log(input.getAttribute('value'));
+                    console.log(input.value);
+                });
+                */
+            });
+        </script>
+</head>
+<body>
+<input type="text" value='默认值123'>
+<input type="text" value='默认值456'>
+<button>我是按钮</button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-jQuery中属性-样式相关的方法</title>
+    <!--<script src='js/jquery-3.1.1.js'></script>-->
+    <script src='01-njQuery-1.2.0.js'></script>
+    <script>
+        /*
+         attr: 添加或获取属性节点
+         prop: 添加或获取属性
+
+         属性和属性节点的区别:
+         1.属性: 任何对象都有属性, 可以通过点或者[]设置和访问属性
+         2:属性节点: 只有DOM对象才有属性节点, 属性节点是写在标签上的
+        */
+        window.onload = function () {
+            /*
+            function Person() {
+            }
+            var p = new Person();
+//        p.name = 'nj';
+            p['name'] = 'nj';
+//        console.log(p.name);
+            console.log(p['name']);
+            */
+            /*
+            var div = document.querySelector('div');
+            // 设置属性节点的值
+            div.setAttribute('age', '18');
+            // 获取属性节点的值
+            console.log(div.getAttribute('age'));
+            */
+
+            // 不能不传递参数
+//            $('div').attr();
+            // 如果传递一个参数, 会返回第一个元素的属性节点值
+//            console.log($('div').attr('name'));
+            // 如果传递两个参数, 会给所有元素添加属性节点值
+//            $('div').attr('age', '18');
+
+            // 如果传递对象, 就给元素批量设置属性节点的值
+            console.log($('div').attr({
+                'abc': '123',
+                'def': '456'
+            }));
+
+        }
+
+    </script>
+</head>
+<body>
+<div class='abc' name='www'></div>
+<div class='abc' name='mmm'></div>
+</body>
+</html>

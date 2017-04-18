@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-jQuery中属性-样式相关方法-css</title>
+    <!--<script src='js/jquery-3.1.1.js'></script>-->
+    <script src='03-njQuery-1.2.2.js'></script>
+        <script>
+            $(function () {
+                // 不能不传递参数
+//                $('div').css();
+                // 传入对象, 批量设置样式
+                $('div').css({
+                    marginTop: '50px',
+                    width: '200px',
+                    height: '200px',
+                    background: 'red'
+                });
+
+                // 传递两个参数, 单独设置某个样式的值
+//                console.log($('div').css('height', '500px'));
+//                console.log($('div').css('width', '500px'));
+//                console.log($('div').css('background', 'red'));
+
+                // 传递一个参数, 获取对应样式的值
+//                console.log($('div').css('height'));
+
+            });
+
+            window.onload = function () {
+
+                function getStyle(dom, styleName) {
+                    // 判断是否支持getComputedStyle方法
+                    if(window.getComputedStyle){
+                        return getComputedStyle(dom)[styleName];
+                    }else{
+                        return dom.currentStyle[styleName];
+                    }
+                }
+//                var div = document.querySelector('div');
+//                div.style.height = '400px';
+                /*
+                 console.log(getComputedStyle(div)['height']);
+                 */
+                /*
+                console.log(div.currentStyle['height']);
+                */
+//                console.log(getStyle(div, 'height'));
+            }
+        </script>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+</body>
+</html>

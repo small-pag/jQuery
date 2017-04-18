@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='js/jquery-3.1.1.js'></script>
+    <!--<script src='02-njQuery-1.2.1.js'></script>-->
+        <script>
+            $(function () {
+            /*
+             attr: 添加或获取属性节点
+             prop: 添加或获取属性
+            */
+                // 不能不传递参数
+//               $('div').prop();
+
+                // 传递两个参数, 设置对象属性
+                // 一定要注意属性是添加到对象上的, 属性节点是添加到Attribute中的
+                console.log($('div').prop('name', 'nj'));
+
+                $('div').get(1).name = 'ttttt';
+                // 传递一个参数, 获取对象的属性值
+                console.log($('div').prop('name'));
+
+
+                console.log($('div').prop({
+                    'abc': '123',
+                    'def': '456'
+                }));
+
+             });
+        </script>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+</body>
+</html>
